@@ -1,3 +1,12 @@
-p {
+header {
+	color:white;
+}
+
+body {
 	background-color: green;
+}
+
+#posts {
+	float: right;
+	margin: 10px;
 }
