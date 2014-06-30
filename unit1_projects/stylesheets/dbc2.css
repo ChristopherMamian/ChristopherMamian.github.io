@@ -1,0 +1,50 @@
+header {
+	font-family: verdana;
+	color: green;
+}
+
+footer {
+	font-family: "Times New Roman", Georgia, verdana;
+	font-style: italic;
+	clear: both;
+}
+
+#left {
+	width: 100px; 
+	height: 100%; 
+	float: left; 
+	background-color: blue
+}
+
+#right {
+	height: 100%;
+	width: 80%;
+	border-style: dotted;
+	margin: 10px;
+	padding: 10px;
+	float: right;
+}
+
+#DBC {
+	clear: right;
+}
+
+a:link {
+	color: green;
+}
+
+a:visited {
+	color: red;
+}
+
+a:hover {
+	color: blue;
+}
+
+body {
+	text-align: center;
+	height: 100%; 
+	margin: 10px;
+	padding: 10px 10px 10px 10px;
+	border-style: solid;
+}
