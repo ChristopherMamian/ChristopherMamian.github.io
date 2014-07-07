@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<!-- saved from url=(0273)https://www.codeschool.com/account?__utma=1.1980953583.1402375261.1404362909.1404433603.6&__utmb=1.1.10.1404433603&__utmc=1&__utmk=20102456&__utmv=-&__utmx=-&__utmz=1.1402375261.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3D%28not%20provided%29 -->
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#" id="sv"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" async="" src="./Dashboard - Code School_files/reamaze.js"></script><script type="text/javascript" async="" src="./Dashboard - Code School_files/56dc3909084576066d3505a86040c1530faba4d3.1.js"></script><script type="text/javascript" async="" src="./Dashboard - Code School_files/i.js"></script><script type="text/javascript" async="" src="./Dashboard - Code School_files/inpage_linkid.js" id="undefined"></script><script src="./Dashboard - Code School_files/5212.js" async="" type="text/javascript"></script><script type="text/javascript" async="" src="./Dashboard - Code School_files/dc.js"></script><script type="text/javascript" id="analytics-js" async="" src="./Dashboard - Code School_files/analytics.min.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-1.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"65b4af9171","applicationID":"132496","transactionName":"Ig4PFRZXWlpTFh8CBwIOFA8QSxlFXgtH","queueTime":0,"applicationTime":4019,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-411.min.js"}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQYCU0VSCwEEXVc="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e){function n(t,e,n){n||(n={});for(var r=o[t],a=r&&r.length||0,s=n[i]||(n[i]={}),u=0;a>u;u++)r[u].apply(s,e);return s}function r(t,e){var n=o[t]||(o[t]=[]);n.push(e)}var o={},i="nr@context";e.exports={on:r,emit:n}},{}],2:[function(t){function e(t,e,n,i,s){return u?u-=1:r("err",[s||new UncaughtException(t,e,n)]),"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t(5),a=window.onerror,s=!1,u=0;t("loader").features.push("err"),window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(d){"stack"in d&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(4),s=!0)}i.on("fn-start",function(){s&&(u+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&u>0&&(u-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:4,3:3,4:6,5:1,6:14,handle:"D5DuLP",loader:"G9z0Bl"}],3:[function(t){function e(t){r.inPlace(t,["addEventListener","removeEventListener"],"-",n)}function n(t){return t[1]}var r=t(1),o=(t(3),t(2));if(e(window),"getPrototypeOf"in Object){for(var i=document;i&&!i.hasOwnProperty("addEventListener");)i=Object.getPrototypeOf(i);i&&e(i);for(var a=XMLHttpRequest.prototype;a&&!a.hasOwnProperty("addEventListener");)a=Object.getPrototypeOf(a);a&&e(a)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&e(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=e["nr@wrapped"]?t[1]=e["nr@wrapped"]:e["nr@wrapped"]=t[1]=r(e,"fn-"):"function"==typeof e.handleEvent&&r.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:15,2:1,3:14}],4:[function(t){var e=(t(3),t(1)),n=t(2);e.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=e(t[0],"fn-")})},{1:15,2:1,3:14}],5:[function(t){function e(t){var e=t[0];"string"==typeof e&&(e=new Function(e)),t[0]=n(e,"fn-")}var n=(t(3),t(1)),r=t(2);n.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",e)},{1:15,2:1,3:14}],6:[function(t){function e(){o.inPlace(this,s,"fn-")}function n(t,e){o.inPlace(e,["onreadystatechange"],"fn-")}function r(t,e){return e}var o=t(1),i=t(2),a=window.XMLHttpRequest,s=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];window.XMLHttpRequest=function(t){var n=new a(t);try{i.emit("new-xhr",[],n),o.inPlace(n,["addEventListener","removeEventListener"],"-",function(t,e){return e}),n.addEventListener("readystatechange",e,!1)}catch(r){try{i.emit("internal-error",r)}catch(s){}}return n},window.XMLHttpRequest.prototype=a.prototype,o.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",r),i.on("send-xhr-start",n),i.on("open-xhr-start",n)},{1:15,2:1}],7:[function(t){function e(){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;u>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,d="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(d);if(f&&(r.rxSize=f),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}t("loader").features.push("xhr");var o=t("handle"),i=t(1),a=t(5),s=["load","error","abort","timeout"],u=s.length,d=t(2);t(3),t(4),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var d=e(o);d&&(r.txSize=d)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",e)}catch(r){}}};for(var f=0;u>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&e()},{1:8,2:11,3:3,4:6,5:1,handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e){var n=r[t];return n?n.apply(this,e):(o[t]||(o[t]=[]),void o[t].push(e))}var r={},o={};e.exports=n,n.queues=o,n.handlers=r},{}],11:[function(t,e){function n(t){if(!t||"object"!=typeof t&&"function"!=typeof t)return-1;if(t===window)return 0;if(o.call(t,"__nr"))return t.__nr;try{return Object.defineProperty(t,"__nr",{value:r,writable:!0,enumerable:!1}),r}catch(e){return t.__nr=r,r}finally{r+=1}}var r=1,o=Object.prototype.hasOwnProperty;e.exports=n},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&u&&u.body){p.proto="https"===c.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=u.createElement("script");e.src=p.proto+t.agent,u.body.appendChild(e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,u=s.document,d="addEventListener",f="attachEvent",c=(""+location).split("?")[0],p=e.exports={offset:i(),origin:c,features:[]};u[d]?(u[d]("DOMContentLoaded",o,!1),s[d]("load",n,!1)):(u[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],14:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],15:[function(t,e){function n(t,e,r,s){function nrWrapper(){try{var n,a=u(arguments),d=this,f=r&&r(a,d)||{}}catch(c){i([c,"",[a,d,s],f])}o(e+"start",[a,d,s],f);try{return n=t.apply(d,a)}catch(p){throw o(e+"err",[a,d,p],f),p}finally{o(e+"end",[a,d,n],f)}}return a(t)?t:(e||(e=""),nrWrapper[n.flag]=!0,nrWrapper)}function r(t,e,r,o){r||(r="");var i,s,u,d="-"===r.charAt(0);for(u=0;u<e.length;u++)s=e[u],i=t[s],a(i)||(t[s]=n(i,d?s+r:r,o,s,t))}function o(t,e,n){try{s.emit(t,e,n)}catch(r){i([r,t,e,n])}}function i(t){try{s.emit("internal-error",t)}catch(e){}}function a(t){return!(t&&"function"==typeof t&&t.apply&&!t[n.flag])}var s=t(1),u=t(2);e.exports=n,n.inPlace=r,n.flag="nr@wrapper"},{1:1,2:14}]},{},["G9z0Bl",2,7]);</script>
+
+<meta content="authenticity_token" name="csrf-param">
+<meta content="Z5U0G2TqUtmLBCYd5ObAe/WQtcG+NW8EMbxZISbneh0=" name="csrf-token">
+<!-- Open Graph protocol: -->
+<meta property="og:title" content="Dashboard - Code School">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://www.codeschool.com/account?__utma=1.1980953583.1402375261.1404362909.1404433603.6&amp;__utmb=1.1.10.1404433603&amp;__utmc=1&amp;__utmk=20102456&amp;__utmv=-&amp;__utmx=-&amp;__utmz=1.1402375261.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3...">
+<meta property="og:image" content="https://d1tijy5l7mg5kk.cloudfront.net/assets/avatar-fc25d835e6f30af304e80f2d58d0aa7c.png">
+<meta property="og:site_name" content="Code School">
+<meta property="fb:admins" content="5200953"><meta property="fb:admins" content="40012883">
+
+<title>Dashboard - Code School</title>
+<link href="https://d1tijy5l7mg5kk.cloudfront.net/assets/favicon-3f245cf247f9da1326322f212c85bd31.ico" rel="shortcut icon" type="image/x-icon">
+
+<meta content="noindex" name="robots">
+<meta content="noindex" name="googlebot">
+
+<link href="" rel="canonical">
+<link href="./Dashboard - Code School_files/application-97b3f1160fb278f96025a55da8f9d181.css" media="screen" rel="stylesheet" type="text/css">
+
+
+<script type="text/javascript" src="./Dashboard - Code School_files/sa.js" async=""></script><script type="text/javascript" src="./Dashboard - Code School_files/33r2xa49.js" async=""></script><style type="text/css">#sv .sublimevideo-Label{overflow:hidden!important;text-align:left!important;} #sv .sublimevideo-Button{background:none!important;border:none!important;margin:0!important;outline:none!important;padding:0!important;font-size:0!important;line-height:0!important;overflow:visible!important;cursor:pointer!important;} #sv .sublimevideo-View{-webkit-tap-highlight-color:rgba(0,0,0,0)!important;display:block!important;position:absolute!important;text-shadow:none!important;border:none!important;z-index:auto!important;} #sv .sublimevideo-VideoView{line-height:0!important;background:rgba(0, 0, 0, 0.99)!important;direction:ltr!important;padding:0!important;text-align:center!important;-webkit-user-select:none!important;-moz-user-select:none!important;} #sv .sublimevideo-VideoView * {padding:0!important;margin:0!important;border:none!important;overflow:visible!important;background:none!important;float:none!important;z-index:auto!important;-moz-border-radius:0!important;-webkit-border-radius:0!important;border-radius:0!important;-moz-box-shadow:none!important;-webkit-box-shadow:none!important;box-shadow:none!important;text-transform:none!important;text-decoration:none!important;max-width:none!important;top:auto!important;bottom:auto!important;left:auto!important;right:auto!important;} </style><script async="true" type="text/javascript" src="https://s.adroll.com/j/roundtrip.js"></script></head>
+<body class=" accounts accounts-show ">
+
+<ul class="notes"></ul>
+<!-- Header -->
+<header class="l-header l-invert">
+<div class="l-cell">
+<div class="grid">
+<div class="grid-box grid-box--1of8 grid-box--tablet--1of4">
+<div class="c-logo"><a href="https://www.codeschool.com/">Code School - Learn by Doing</a></div>
+</div>
+<div class="grid-box grid-box--7of8 grid-box--tablet--3of4 grid-box--right">
+<nav class="nav nav--site has-form--authMini" id="site-navigation">
+<ul class="c-shout">
+<li><a href="https://www.codeschool.com/courses" class="false">Courses</a></li>
+<li><a href="https://www.codeschool.com/code_tv" class="false">Screencasts</a></li>
+<li><a href="http://discuss.codeschool.com/">Discuss</a></li>
+<li><a href="https://www.codeschool.com/support">Support</a></li>
+<li><a href="https://www.codeschool.com/enroll">Enroll</a></li>
+<li class="" data-account-url="https://www.codeschool.com/account" data-logout-url="/users/sign_out"><a href="https://www.codeschool.com/account">My Account</a></li><li title="Sign Out"><a href="https://www.codeschool.com/users/sign_out" data-method="delete">Sign Out</a></li>
+<div class="form--authMini" id="header-sign-in-form">
+<form accept-charset="UTF-8" action="https://www.codeschool.com/users/sign_in" class="new_user" data-rel="internal" id="new_user" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="Z5U0G2TqUtmLBCYd5ObAe/WQtcG+NW8EMbxZISbneh0="></div>
+
+<input id="return" name="return" type="hidden" value="/account">
+<a href="https://www.codeschool.com/account?__utma=1.1980953583.1402375261.1404362909.1404433603.6&__utmb=1.1.10.1404433603&__utmc=1&__utmk=20102456&__utmv=-&__utmx=-&__utmz=1.1402375261.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3D%28not%20provided%29#" class="form--authMini-close">x</a>
+<div class="omniAuth omniAuth--mini">
+<p>Sign in with:</p>
+<a href="https://www.codeschool.com/auth/github" class="omniAuth-service omniAuth-service--github">Github</a>
+<a href="https://www.codeschool.com/auth/facebook" class="omniAuth-service omniAuth-service--facebook">Facebook</a>
+<a href="https://www.codeschool.com/auth/gplus" class="omniAuth-service omniAuth-service--google">Google+</a>
+</div>
+<fieldset class="form--authMini-field">
+<input class="form--authMini-input" id="user_login" name="user[login]" placeholder="Email or Username" size="30" type="email">
+</fieldset>
+<fieldset class="form--authMini-field l-context">
+<input class="form--authMini-input" id="user_password" name="user[password]" placeholder="Password" size="30" type="password">
+<a href="https://www.codeschool.com/users/password/new" class="btn--password" rel="tooltip" data-original-title="Forgot Password?">Forgot password?</a>
+</fieldset>
+<fieldset class="form--authMini-field form--authMini-field--submit">
+<input class="btn-a btn--submit btn-block" name="commit" type="submit" value="Sign In">
+</fieldset>
+</form>
+
+</div>
+</ul>
+</nav>
+
+</div>
+</div>
+</div>
+</header>
+<nav class="nav nav--sub has-userBar" id="account-navigation">
+<div class="l-cell">
+<ul>
+<li><a href="https://www.codeschool.com/account" class="is-active">Dashboard</a></li>
+<li><a href="https://www.codeschool.com/account/transactions">History</a></li>
+<li><a href="https://www.codeschool.com/account/prizes">Rewards</a></li>
+<li class="nav--sub-asideLink l-pullRight"><a href="https://www.codeschool.com/users/686693">My Report Card</a></li>
+</ul>
+</div>
+</nav>
+
+<div class="modal modal--video tour js-tour fade l-hide" id="tour">
+<div class="modal-header head">
+<h3 class="header">Welcome to Code School</h3>
+<a href="https://www.codeschool.com/account?__utma=1.1980953583.1402375261.1404362909.1404433603.6&__utmb=1.1.10.1404433603&__utmc=1&__utmk=20102456&__utmv=-&__utmx=-&__utmz=1.1402375261.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3D%28not%20provided%29#" class="close" data-dismiss="modal">x</a>
+</div>
+<div class="modal-body">
+<div class="l-space"><span class="sublimevideo-View sublimevideo-VideoView" id="sv_player_0" style="position: relative !important; top: 0px !important; height: 360px !important; left: 0px !important; width: 640px !important;"><span class="sublimevideo-View sublimevideo-Video sublimevideo-FlashVideo" style="top: 0px !important; bottom: 0px !important; margin: 0px !important; height: 100% !important; left: 0px !important; right: 0px !important; width: 100% !important;"></span><span class="sublimevideo-View sublimevideo-ImageView" style="opacity: 0.99 !important; pointer-events: none !important; overflow: hidden !important; top: 0px !important; bottom: 0px !important; margin: 0px !important; height: 100% !important; left: 0px !important; right: 0px !important; width: 100% !important; background: black !important;"><img src="./Dashboard - Code School_files/getting-started-poster-1e38634ee50347a59a2c6ac7ce32c53b.png" width="640" height="0" style="position: absolute !important; display: block !important; width: 640px !important; height: 360px !important; top: 0px !important; left: 0px !important; max-width: 640px !important; max-height: none !important;"></span><span class="sublimevideo-View" style="top: 0px !important; bottom: 0px !important; margin: 0px !important; height: 100% !important; left: 0px !important; right: 0px !important; width: 100% !important;"><span class="sublimevideo-View sublimevideo-Button sublimevideo-StartView" style="top: 0px !important; bottom: 0px !important; margin: 0px !important; height: 100% !important; left: 0px !important; right: 0px !important; width: 100% !important;"><span class="sublimevideo-View" style="position: static !important; top: 0px !important; bottom: 0px !important; margin: 0px !important; height: 100% !important; left: 0px !important; right: 0px !important; width: 100% !important;"><span class="sublimevideo-View" style="opacity: 0.3 !important; top: 0px !important; bottom: 0px !important; margin: 0px !important; height: 100% !important; left: 0px !important; right: 0px !important; width: 100% !important; background: rgb(0, 0, 0) !important;"></span><span class="sublimevideo-View" style="top: 40.27777777777778% !important; height: 70px !important; left: 0px !important; right: 0px !important; margin-right: auto !important; margin-left: auto !important; width: 70px !important;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="84" height="84" style="pointer-events: none !important; position: absolute !important; top: -7px !important; left: -7px !important; width: 84px !important; height: 84px !important; background: transparent !important;"><g><g><defs><filter id="sublimeFilter1" filterUnits="userSpaceOnUse"><feoffset result="1" dx="0" dy="1"></feoffset><fegaussianblur result="2" stdDeviation="2.6208"></fegaussianblur></filter></defs><path d="M42 7 A35, 35, 270, 0, 0, 7, 42 A35, 35, 270, 0, 0, 42, 77 A35, 35, 270, 0, 0, 77, 42 A35, 35, 270, 0, 0, 42, 7 L42 7 M42.00000000000001 11 A31, 31, 90, 0, 1, 73, 42 A31, 31, 90, 0, 1, 42, 73 A31, 31, 90, 0, 1, 11, 42 A31, 31, 90, 0, 1, 42, 11 M30 29 L56 42 L30 55 L30 29 Z" transform="" fill="rgba(0,0,0,0.4)" stroke-width="0" stroke="rgba(0,0,0,0.4)" stroke-linejoin="round" filter="url(&quot;https://www.codeschool.com/account?__utma=1.1980953583.1402375261.1404362909.1404433603.6&amp;__utmb=1.1.10.1404433603&amp;__utmc=1&amp;__utmk=20102456&amp;__utmv=-&amp;__utmx=-&amp;__utmz=1.1402375261.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3D%28not%20provided%29#sublimeFilter1&quot;)" mask="url(&quot;https://www.codeschool.com/account?__utma=1.1980953583.1402375261.1404362909.1404433603.6&amp;__utmb=1.1.10.1404433603&amp;__utmc=1&amp;__utmk=20102456&amp;__utmv=-&amp;__utmx=-&amp;__utmz=1.1402375261.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3D%28not%20provided%29#sublimeMask1&quot;)"></path><path d="M42 7 A35, 35, 270, 0, 0, 7, 42 A35, 35, 270, 0, 0, 42, 77 A35, 35, 270, 0, 0, 77, 42 A35, 35, 270, 0, 0, 42, 7 L42 7 M42.00000000000001 11 A31, 31, 90, 0, 1, 73, 42 A31, 31, 90, 0, 1, 42, 73 A31, 31, 90, 0, 1, 11, 42 A31, 31, 90, 0, 1, 42, 11 M30 29 L56 42 L30 55 L30 29 Z" transform="" fill="rgba(255,255,255,0.9)"></path></g></g><defs><mask id="sublimeMask1" maskUnits="userSpaceOnUse"><rect x="0" y="0" width="100%" height="100%" fill="white"></rect><path d="M42 7 A35, 35, 270, 0, 0, 7, 42 A35, 35, 270, 0, 0, 42, 77 A35, 35, 270, 0, 0, 77, 42 A35, 35, 270, 0, 0, 42, 7 L42 7 M42.00000000000001 11 A31, 31, 90, 0, 1, 73, 42 A31, 31, 90, 0, 1, 42, 73 A31, 31, 90, 0, 1, 11, 42 A31, 31, 90, 0, 1, 42, 11 M30 29 L56 42 L30 55 L30 29 Z" fill="black"></path></mask></defs></svg></span></span></span></span></span>
+<video class="sublime" data-player-kit="3" data-settings="autoresize:fit" height="360" id="getting-started" preload="auto" width="640" style="display: none !important;">
+<source data-quality="hd" src="//www.viddler.com/file/d/837dbc6f.mp4?vfid=708505594022d3d447663c1a95a44572" type="video/mp4">
+<source src="//www.viddler.com/file/d/837dbc6f.mp4?vfid=708505594022d3da16753bde196b41e3" type="video/mp4">
+</video>
+
+</div>
+<div class="l-xspace c-center">
+<div class="l-space">
+<a href="https://www.codeschool.com/getting-started" class="btn btn-b btn-thin btn-iblock">Learn More About Getting Started</a>
+</div>
+</div>
+</div>
+<div class="modal-footer c-center">
+<a href="https://www.codeschool.com/account?__utma=1.1980953583.1402375261.1404362909.1404433603.6&__utmb=1.1.10.1404433603&__utmc=1&__utmk=20102456&__utmv=-&__utmx=-&__utmz=1.1402375261.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3D%28not%20provided%29#" class="c-base js-tour-close">Take Me To My Account →
+</a></div>
+</div>
+
+
+<section class="content is-userBar-expanded">
+<div class="l-context">
+<div class="l-row has-userBar has-userBar--content">
+<div class="l-cell">
+<div class="l-card--a l-well l-xxspace" id="account-status">
+<div class="grid">
+<div class="grid-box grid-box--1of2">
+<div class="l-space">
+<h2 class="c-account l-flush">Free Account</h2>
+<p class="c-callout">You are not enrolled in Code School, but you have access to all of our free content.</p>
+</div>
+</div>
+<div class="grid-box grid-box--1of2">
+<p class="l-space">Enroll now for access to all Code School courses and resources.</p>
+<a href="https://www.codeschool.com/enrollment/new" class="btn btn-a btn-thin btn-iblock">Enroll Now</a>
+</div>
+</div>
+</div>
+<div class="grid">
+<div class="grid-box grid-box--desk--1of2">
+
+<div class="dropdown-btn">
+<a href="https://www.codeschool.com/account?__utma=1.1980953583.1402375261.1404362909.1404433603.6&__utmb=1.1.10.1404433603&__utmc=1&__utmk=20102456&__utmv=-&__utmx=-&__utmz=1.1402375261.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3D%28not%20provided%29#" class="dropdown-toggle">Filter:
+<span class="caret"></span>
+</a><ul class="dropdown-menu">
+<li><a href="https://www.codeschool.com/account?__utma=1.1980953583.1402375261.1404362909.1404433603.6&__utmb=1.1.10.1404433603&__utmc=1&__utmk=20102456&__utmv=-&__utmx=-&__utmz=1.1402375261.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3D%28not%20provided%29#recently-played" class="is-active">Recently Played</a></li>
+<li><a href="https://www.codeschool.com/account?__utma=1.1980953583.1402375261.1404362909.1404433603.6&__utmb=1.1.10.1404433603&__utmc=1&__utmk=20102456&__utmv=-&__utmx=-&__utmz=1.1402375261.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3D%28not%20provided%29#completed-courses">Completed Courses</a></li>
+<li><a href="https://www.codeschool.com/account?__utma=1.1980953583.1402375261.1404362909.1404433603.6&__utmb=1.1.10.1404433603&__utmc=1&__utmk=20102456&__utmv=-&__utmx=-&__utmz=1.1402375261.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3D%28not%20provided%29#latest-courses">Latest Courses</a></li>
+</ul>
+</div>
+<div class="filter-content l-xspace is-visible" id="recently-played">
+<h1 class="c-h2 c-account">Recently Played</h1>
+<ol class="limiter-items">
+<li class="course course--active">
+<a href="https://www.codeschool.com/courses/discover-devtools/goto" class="l-card--a l-card--thin"><div class="progress" data-width="39%" style="width: 39%;"></div>
+<div class="bucket bucket--middle l-context">
+<div class="bucket-media">
+<span class="badge-progress">39%</span>
+<img alt="Discover DevTools Completion Badge" class="badge" height="59" itemprop="image" src="./Dashboard - Code School_files/discover-devtools-440565286cc2e81ce465e450b7f078bc.png" width="59">
+</div>
+<div class="bucket-content">
+<h3 class="c-h4 course-name">Discover DevTools</h3>
+</div>
+</div>
+<p class="btn-a course-control">Play</p>
+</a></li>
+<li class="course course--active">
+<a href="https://www.codeschool.com/courses/rails-for-zombies-redux/goto" class="l-card--a l-card--thin"><div class="progress" data-width="54%" style="width: 54%;"></div>
+<div class="bucket bucket--middle l-context">
+<div class="bucket-media">
+<span class="badge-progress">54%</span>
+<img alt="Rails for Zombies Redux Completion Badge" class="badge" height="59" itemprop="image" src="./Dashboard - Code School_files/rails-for-zombies-redux-7cd69c56c8709bc7850c5d98329d91f4.png" width="59">
+</div>
+<div class="bucket-content">
+<h3 class="c-h4 course-name">Rails for Zombies Redux</h3>
+</div>
+</div>
+<p class="btn-a course-control">Play</p>
+</a></li>
+
+</ol>
+
+</div>
+<div class="filter-content l-xspace" id="completed-courses">
+<h2 class="c-account">Completed Courses</h2>
+<div class="l-context">
+<div class="callout template-callout template-callout--cap">
+<h2 class="callout-header">No Completed Courses</h2>
+<p class="callout-msg">Once you <a href="https://www.codeschool.com/courses">complete some courses</a>, they'll show up right here.</p>
+</div>
+<div class="template template--completeCourse l-xspace">
+<div class="template-overlay"></div>
+<div class="bucket bucket--middle">
+<div class="bucket-media">
+<div class="template-badge"></div>
+</div>
+<div class="bucket-content">
+<div class="template-text template-text--title l-space"></div>
+<ul class="template-list">
+<li class="template-text template-text--list template-list-item"></li>
+<li class="template-text template-text--list template-list-item"></li>
+<li class="template-text template-text--list template-list-item"></li>
+</ul>
+</div>
+</div>
+<div class="template-progress"></div>
+</div>
+<div class="template template--completeCourse l-xspace">
+<div class="template-overlay"></div>
+<div class="bucket bucket--middle">
+<div class="bucket-media">
+<div class="template-badge"></div>
+</div>
+<div class="bucket-content">
+<div class="template-text template-text--title l-space"></div>
+<ul class="template-list">
+<li class="template-text template-text--list template-list-item"></li>
+<li class="template-text template-text--list template-list-item"></li>
+<li class="template-text template-text--list template-list-item"></li>
+</ul>
+</div>
+</div>
+<div class="template-progress"></div>
+</div>
+<div class="template template--completeCourse l-xspace">
+<div class="template-overlay"></div>
+<div class="bucket bucket--middle">
+<div class="bucket-media">
+<div class="template-badge"></div>
+</div>
+<div class="bucket-content">
+<div class="template-text template-text--title l-space"></div>
+<ul class="template-list">
+<li class="template-text template-text--list template-list-item"></li>
+<li class="template-text template-text--list template-list-item"></li>
+<li class="template-text template-text--list template-list-item"></li>
+</ul>
+</div>
+</div>
+<div class="template-progress"></div>
+</div>
+<div class="template template--completeCourse l-xspace">
+<div class="template-overlay"></div>
+<div class="bucket bucket--middle">
+<div class="bucket-media">
+<div class="template-badge"></div>
+</div>
+<div class="bucket-content">
+<div class="template-text template-text--title l-space"></div>
+<ul class="template-list">
+<li class="template-text template-text--list template-list-item"></li>
+<li class="template-text template-text--list template-list-item"></li>
+<li class="template-text template-text--list template-list-item"></li>
+</ul>
+</div>
+</div>
+<div class="template-progress"></div>
+</div>
+
+</div>
+</div>
+<div class="filter-content l-xspace" id="latest-courses">
+<h2 class="c-account">Latest Courses</h2>
+<ol class="limiter-items">
+<li class="course course--active">
+<a href="https://www.codeschool.com/courses/shaping-up-with-angular-js/goto" class="l-card--a l-card--thin"><div class="progress" data-width="0%" style="width: 0%;"></div>
+<div class="bucket bucket--middle l-context">
+<div class="bucket-media">
+<img alt="Shaping up with Angular.js Completion Badge" class="badge" height="59" itemprop="image" src="./Dashboard - Code School_files/shaping-up-with-angular-js-83ceb89bd5255391f25230727ae3f019.png" width="59">
+</div>
+<div class="bucket-content">
+<h3 class="c-h4 course-name">Shaping up with Angular.js</h3>
+</div>
+</div>
+<p class="btn-a course-control">Play</p>
+</a></li>
+<li class="course course--active">
+<a href="https://www.codeschool.com/courses/exploring-google-maps-for-ios/goto" class="l-card--a l-card--thin"><div class="progress" data-width="0%" style="width: 0%;"></div>
+<div class="bucket bucket--middle l-context">
+<div class="bucket-media">
+<img alt="Exploring Google Maps for iOS Completion Badge" class="badge" height="59" itemprop="image" src="./Dashboard - Code School_files/exploring-google-maps-for-ios-fb7a75050872aaacd5fb157303cae7d1.png" width="59">
+</div>
+<div class="bucket-content">
+<h3 class="c-h4 course-name">Exploring Google Maps for iOS</h3>
+</div>
+</div>
+<p class="btn-a course-control">Play</p>
+</a></li>
+<li class="course course--active">
+<a href="https://www.codeschool.com/courses/surviving-apis-with-rails/goto" class="l-card--a l-card--thin"><div class="progress" data-width="0%" style="width: 0%;"></div>
+<div class="bucket bucket--middle l-context">
+<div class="bucket-media">
+<img alt="Surviving APIs with Rails Completion Badge" class="badge" height="59" itemprop="image" src="./Dashboard - Code School_files/surviving-apis-with-rails-482f87efd9827f52ecaa027f733592cb.png" width="59">
+</div>
+<div class="bucket-content">
+<h3 class="c-h4 course-name">Surviving APIs with Rails</h3>
+</div>
+</div>
+<p class="btn-a course-control">Play</p>
+</a></li>
+<li class="course course--active">
+<a href="https://www.codeschool.com/courses/discover-drive/goto" class="l-card--a l-card--thin"><div class="progress" data-width="0%" style="width: 0%;"></div>
+<div class="bucket bucket--middle l-context">
+<div class="bucket-media">
+<img alt="Discover Drive Completion Badge" class="badge" height="59" itemprop="image" src="./Dashboard - Code School_files/discover-drive-2b1029e989beb93b6fe63af100dd28d9.png" width="59">
+</div>
+<div class="bucket-content">
+<h3 class="c-h4 course-name">Discover Drive</h3>
+</div>
+</div>
+<p class="btn-a course-control">Play</p>
+</a></li>
+<li class="course course--active">
+<a href="https://www.codeschool.com/courses/warming-up-with-ember-js/goto" class="l-card--a l-card--thin"><div class="progress" data-width="0%" style="width: 0%;"></div>
+<div class="bucket bucket--middle l-context">
+<div class="bucket-media">
+<img alt="Warming Up With Ember.js Completion Badge" class="badge" height="59" itemprop="image" src="./Dashboard - Code School_files/warming-up-with-ember-js-b16eb887b22f90c7eb2d4dc195ebcbd6.png" width="59">
+</div>
+<div class="bucket-content">
+<h3 class="c-h4 course-name">Warming Up With Ember.js</h3>
+</div>
+</div>
+<p class="btn-a course-control">Play</p>
+</a></li>
+
+</ol>
+<a href="https://www.codeschool.com/courses" class="more l-card--b">View All Courses</a>
+</div>
+</div>
+<div class="grid-box grid-box--desk--1of2">
+<h2 class="c-account">
+Path Progress
+<a href="https://www.codeschool.com/courses" class="inline">View Paths</a>
+</h2>
+<div class="limiter-items--paths">
+<div class="l-card--pathProgress l-card--pathProgress--space limiter-item--paths">
+<div class="bucket">
+<div class="bucket-media">
+<div class="badge badge--progress" data-complete="0" data-total="11" rel="tooltip" data-original-title="You have 11 courses left to earn Ruby Master status.">
+<img alt="Ruby Path Badge" class="badge--progress-img" height="110" src="./Dashboard - Code School_files/badge-ruby-eb378661b50764d87959317b150f9cf1.svg" width="110">
+<svg version="1.1" width="110" height="110" style="visibility: visible;"><g transform="matrix(1 0 0 1 0 0)" visibility="hidden"><g id="two-12" transform="matrix(1 0 0 1 0 0)" visibility="hidden"><path id="two-13" transform="matrix(1 0 0 1 0 0)" stroke="none" fill="#181b21" fill-opacity="0.8750000000000006" stroke-opacity="0.8750000000000006" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="1" d="M 55.000 55.000 L 114.470 -37.538 L 55.000 -55.000"></path><path id="two-14" transform="matrix(1 0 0 1 0 0)" stroke="none" fill="#181b21" fill-opacity="0.8750000000000006" stroke-opacity="0.8750000000000006" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="1" d="M 55.000 55.000 L 155.060 9.304 L 114.470 -37.538"></path><path id="two-15" transform="matrix(1 0 0 1 0 0)" stroke="none" fill="#181b21" fill-opacity="0.8750000000000006" stroke-opacity="0.8750000000000006" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="1" d="M 55.000 55.000 L 163.880 70.655 L 155.060 9.304"></path><path id="two-16" transform="matrix(1 0 0 1 0 0)" stroke="none" fill="#181b21" fill-opacity="0.8750000000000006" stroke-opacity="0.8750000000000006" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="1" d="M 55.000 55.000 L 138.132 127.035 L 163.880 70.655"></path><path id="two-17" transform="matrix(1 0 0 1 0 0)" stroke="none" fill="#181b21" fill-opacity="0.8750000000000006" stroke-opacity="0.8750000000000006" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="1" d="M 55.000 55.000 L 85.991 160.544 L 138.132 127.035"></path><path id="two-18" transform="matrix(1 0 0 1 0 0)" stroke="none" fill="#181b21" fill-opacity="0.8750000000000006" stroke-opacity="0.8750000000000006" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="1" d="M 55.000 55.000 L 24.009 160.544 L 85.991 160.544"></path><path id="two-19" transform="matrix(1 0 0 1 0 0)" stroke="none" fill="#181b21" fill-opacity="0.8750000000000006" stroke-opacity="0.8750000000000006" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="1" d="M 55.000 55.000 L -28.132 127.035 L 24.009 160.544"></path><path id="two-20" transform="matrix(1 0 0 1 0 0)" stroke="none" fill="#181b21" fill-opacity="0.8750000000000006" stroke-opacity="0.8750000000000006" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="1" d="M 55.000 55.000 L -53.880 70.655 L -28.132 127.035"></path><path id="two-21" transform="matrix(1 0 0 1 0 0)" stroke="none" fill="#181b21" fill-opacity="0.8750000000000006" stroke-opacity="0.8750000000000006" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="1" d="M 55.000 55.000 L -45.060 9.304 L -53.880 70.655"></path><path id="two-22" transform="matrix(1 0 0 1 0 0)" stroke="none" fill="#181b21" fill-opacity="0.8750000000000006" stroke-opacity="0.8750000000000006" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="1" d="M 55.000 55.000 L -4.470 -37.538 L -45.060 9.304"></path><path id="two-23" transform="matrix(1 0 0 1 0 0)" stroke="none" fill="#181b21" fill-opacity="0.8750000000000006" stroke-opacity="0.8750000000000006" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="1" d="M 55.000 55.000 L 55.000 -55.000 L -4.470 -37.538"></path></g><g id="two-24" transform="matrix(1 0 0 1 0 0)" visibility="hidden"><path id="two-1" transform="matrix(1 0 0 1 84.735 8.731)" stroke="#efeddf" fill="transparent" fill-opacity="1.0000000000000002" stroke-opacity="1.0000000000000002" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="2px" d="M -29.735 46.269 L 29.735 -46.269"></path><path id="two-2" transform="matrix(1 0 0 1 105.03 32.152)" stroke="#efeddf" fill="transparent" fill-opacity="1.0000000000000002" stroke-opacity="1.0000000000000002" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="2px" d="M -50.030 22.848 L 50.030 -22.848"></path><path id="two-3" transform="matrix(1 0 0 1 109.44 62.827)" stroke="#efeddf" fill="transparent" fill-opacity="1.0000000000000002" stroke-opacity="1.0000000000000002" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="2px" d="M -54.440 -7.827 L 54.440 7.827"></path><path id="two-4" transform="matrix(1 0 0 1 96.566 91.017)" stroke="#efeddf" fill="transparent" fill-opacity="1.0000000000000002" stroke-opacity="1.0000000000000002" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="2px" d="M -41.566 -36.017 L 41.566 36.017"></path><path id="two-5" transform="matrix(1 0 0 1 70.495 107.772)" stroke="#efeddf" fill="transparent" fill-opacity="1.0000000000000002" stroke-opacity="1.0000000000000002" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="2px" d="M -15.495 -52.772 L 15.495 52.772"></path><path id="two-6" transform="matrix(1 0 0 1 39.505 107.772)" stroke="#efeddf" fill="transparent" fill-opacity="1.0000000000000002" stroke-opacity="1.0000000000000002" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="2px" d="M 15.495 -52.772 L -15.495 52.772"></path><path id="two-7" transform="matrix(1 0 0 1 13.434 91.017)" stroke="#efeddf" fill="transparent" fill-opacity="1.0000000000000002" stroke-opacity="1.0000000000000002" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="2px" d="M 41.566 -36.017 L -41.566 36.017"></path><path id="two-8" transform="matrix(1 0 0 1 0.56 62.827)" stroke="#efeddf" fill="transparent" fill-opacity="1.0000000000000002" stroke-opacity="1.0000000000000002" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="2px" d="M 54.440 -7.827 L -54.440 7.827"></path><path id="two-9" transform="matrix(1 0 0 1 4.97 32.152)" stroke="#efeddf" fill="transparent" fill-opacity="1.0000000000000002" stroke-opacity="1.0000000000000002" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="2px" d="M 50.030 22.848 L -50.030 -22.848"></path><path id="two-10" transform="matrix(1 0 0 1 25.265 8.731)" stroke="#efeddf" fill="transparent" fill-opacity="1.0000000000000002" stroke-opacity="1.0000000000000002" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="2px" d="M 29.735 46.269 L -29.735 -46.269"></path><path id="two-11" transform="matrix(1 0 0 1 55 0)" stroke="#efeddf" fill="transparent" fill-opacity="1.0000000000000002" stroke-opacity="1.0000000000000002" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="2px" d="M 0.000 55.000 L -0.000 -55.000"></path></g></g></svg></div>
+</div>
+<div class="bucket-content">
+<em class="label label-b l-space">Courses Left</em>
+<ol class="list--badges">
+<li>
+<a href="https://www.codeschool.com/courses/try-ruby" data-content="Play this course for free!" data-path="ruby" data-play="/courses/try-ruby" rel="popup" title="Try Ruby"><img alt="Try Ruby" class="badge" height="65" src="./Dashboard - Code School_files/try-ruby-2545443181adf574183b4f7b06b8ad73.png" width="65">
+</a></li>
+<li>
+<a href="https://www.codeschool.com/courses/rails-for-zombies-redux" data-content="Learn Ruby on Rails, an open-source framework." data-path="ruby" data-play="/courses/rails-for-zombies-redux" rel="popup" title="Rails for Zombies Redux"><img alt="Rails for Zombies Redux" class="badge" height="65" src="./Dashboard - Code School_files/rails-for-zombies-redux-cb1011b0ed5f8bb98c97e8e97d7faa3e.png" width="65">
+</a></li>
+<li style="position: relative;">
+<a href="https://www.codeschool.com/courses/ruby-bits" data-content="Play the first level for free!" data-path="ruby" data-play="/courses/ruby-bits" rel="popup" title="Ruby Bits"><img alt="Ruby Bits" class="badge" height="65" src="./Dashboard - Code School_files/ruby-bits-925de89ab10eeeb27330ae7683c0aec0.png" width="65">
+</a></li>
+<li>
+<a href="https://www.codeschool.com/enroll" class="badge-locked" data-content="In order to play this course, you need to enroll as an Official Student." data-path="enroll" data-play="/enroll" rel="popup" title="Enroll Now"><img alt="Rails for Zombies 2" class="badge badge--locked" height="65" src="./Dashboard - Code School_files/rails-for-zombies-2-590765e03b81ef9c6899b755ecc6c56e.png" width="65">
+</a></li>
+<li class="is-hidden">
+<a href="https://www.codeschool.com/courses/ruby-bits-part-2" data-content="Play the first level for free!" data-path="ruby" data-play="/courses/ruby-bits-part-2" rel="popup" title="Ruby Bits Part 2"><img alt="Ruby Bits Part 2" class="badge" height="65" src="./Dashboard - Code School_files/ruby-bits-part-2-59098ceb97c12ac640eebadf6a4da58a.png" width="65">
+</a></li>
+<li class="is-hidden">
+<a href="https://www.codeschool.com/courses/rails-4-zombie-outlaws" data-content="Play the first level for free!" data-path="ruby" data-play="/courses/rails-4-zombie-outlaws" rel="popup" title="Rails 4: Zombie Outlaws"><img alt="Rails 4: Zombie Outlaws" class="badge" height="65" src="./Dashboard - Code School_files/rails-4-zombie-outlaws-34baf50cb535a8ef10496a09cb6f9e07.png" width="65">
+</a></li>
+<li class="is-hidden">
+<a href="https://www.codeschool.com/courses/rails-testing-for-zombies" data-content="Play the first level for free!" data-path="ruby" data-play="/courses/rails-testing-for-zombies" rel="popup" title="Rails Testing for Zombies"><img alt="Rails Testing for Zombies" class="badge" height="65" src="./Dashboard - Code School_files/rails-testing-for-zombies-3063979b300344e0027ef23ee7aab221.png" width="65">
+</a></li>
+<li class="is-hidden">
+<a href="https://www.codeschool.com/enroll" class="badge-locked" data-content="In order to play this course, you need to enroll as an Official Student." data-path="enroll" data-play="/enroll" rel="popup" title="Enroll Now"><img alt="Rails 4 Patterns" class="badge badge--locked" height="65" src="./Dashboard - Code School_files/rails-4-patterns-e029cd411b83525e82500b0ce2b268ec.png" width="65">
+</a></li>
+<li class="is-hidden">
+<a href="https://www.codeschool.com/courses/testing-with-rspec" data-content="Play the first level for free!" data-path="ruby" data-play="/courses/testing-with-rspec" rel="popup" title="Testing with RSpec"><img alt="Testing with RSpec" class="badge" height="65" src="./Dashboard - Code School_files/testing-with-rspec-28aac9e9dc98d373f4bce659214c5b3a.png" width="65">
+</a></li>
+<li class="is-hidden">
+<a href="https://www.codeschool.com/courses/surviving-apis-with-rails" data-content="Play the first level for free!" data-path="ruby" data-play="/courses/surviving-apis-with-rails" rel="popup" title="Surviving APIs with Rails"><img alt="Surviving APIs with Rails" class="badge" height="65" src="./Dashboard - Code School_files/surviving-apis-with-rails-482f87efd9827f52ecaa027f733592cb(1).png" width="65">
+</a></li>
+<li class="is-hidden">
+<a href="https://www.codeschool.com/enroll" class="badge-locked" data-content="In order to play this course, you need to enroll as an Official Student." data-path="enroll" data-play="/enroll" rel="popup" title="Enroll Now"><img alt="Rails Best Practices" class="badge badge--locked" height="65" src="./Dashboard - Code School_files/rails-best-practices-b9e75f3638fce8cca1eec6b6c221d2f5.png" width="65">
+</a></li>
+</ol>
+<a href="https://www.codeschool.com/account?__utma=1.1980953583.1402375261.1404362909.1404433603.6&__utmb=1.1.10.1404433603&__utmc=1&__utmk=20102456&__utmv=-&__utmx=-&__utmz=1.1402375261.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3D%28not%20provided%29#" class="list--badges-toggle">+ Show all</a>
+</div>
+</div>
+</div>
+<div class="l-card--pathProgress l-card--pathProgress--space limiter-item--paths">
+<div class="bucket">
+<div class="bucket-media">
+<div class="badge badge--progress" data-complete="0" data-total="6" rel="tooltip" data-original-title="You have 6 courses left to earn Electives Master status.">
+<img alt="Electives Path Badge" class="badge--progress-img" height="110" src="./Dashboard - Code School_files/badge-electives-460a0db7e3bd1772d7cf49519b6748fe.svg" width="110">
+<svg version="1.1" width="110" height="110" style="visibility: visible;"><g transform="matrix(1 0 0 1 0 0)" visibility="hidden"><g id="two-7" transform="matrix(1 0 0 1 0 0)" visibility="hidden"><path id="two-8" transform="matrix(1 0 0 1 0 0)" stroke="none" fill="#181b21" fill-opacity="0.8750000000000006" stroke-opacity="0.8750000000000006" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="1" d="M 55.000 55.000 L 150.263 0.000 L 55.000 -55.000"></path><path id="two-9" transform="matrix(1 0 0 1 0 0)" stroke="none" fill="#181b21" fill-opacity="0.8750000000000006" stroke-opacity="0.8750000000000006" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="1" d="M 55.000 55.000 L 150.263 110.000 L 150.263 0.000"></path><path id="two-10" transform="matrix(1 0 0 1 0 0)" stroke="none" fill="#181b21" fill-opacity="0.8750000000000006" stroke-opacity="0.8750000000000006" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="1" d="M 55.000 55.000 L 55.000 165.000 L 150.263 110.000"></path><path id="two-11" transform="matrix(1 0 0 1 0 0)" stroke="none" fill="#181b21" fill-opacity="0.8750000000000006" stroke-opacity="0.8750000000000006" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="1" d="M 55.000 55.000 L -40.263 110.000 L 55.000 165.000"></path><path id="two-12" transform="matrix(1 0 0 1 0 0)" stroke="none" fill="#181b21" fill-opacity="0.8750000000000006" stroke-opacity="0.8750000000000006" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="1" d="M 55.000 55.000 L -40.263 -0.000 L -40.263 110.000"></path><path id="two-13" transform="matrix(1 0 0 1 0 0)" stroke="none" fill="#181b21" fill-opacity="0.8750000000000006" stroke-opacity="0.8750000000000006" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="1" d="M 55.000 55.000 L 55.000 -55.000 L -40.263 -0.000"></path></g><g id="two-14" transform="matrix(1 0 0 1 0 0)" visibility="hidden"><path id="two-1" transform="matrix(1 0 0 1 102.631 27.5)" stroke="#efeddf" fill="transparent" fill-opacity="1.0000000000000002" stroke-opacity="1.0000000000000002" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="2px" d="M -47.631 27.500 L 47.631 -27.500"></path><path id="two-2" transform="matrix(1 0 0 1 102.631 82.5)" stroke="#efeddf" fill="transparent" fill-opacity="1.0000000000000002" stroke-opacity="1.0000000000000002" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="2px" d="M -47.631 -27.500 L 47.631 27.500"></path><path id="two-3" transform="matrix(1 0 0 1 55 110)" stroke="#efeddf" fill="transparent" fill-opacity="1.0000000000000002" stroke-opacity="1.0000000000000002" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="2px" d="M -0.000 -55.000 L 0.000 55.000"></path><path id="two-4" transform="matrix(1 0 0 1 7.369 82.5)" stroke="#efeddf" fill="transparent" fill-opacity="1.0000000000000002" stroke-opacity="1.0000000000000002" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="2px" d="M 47.631 -27.500 L -47.631 27.500"></path><path id="two-5" transform="matrix(1 0 0 1 7.369 27.5)" stroke="#efeddf" fill="transparent" fill-opacity="1.0000000000000002" stroke-opacity="1.0000000000000002" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="2px" d="M 47.631 27.500 L -47.631 -27.500"></path><path id="two-6" transform="matrix(1 0 0 1 55 0)" stroke="#efeddf" fill="transparent" fill-opacity="1.0000000000000002" stroke-opacity="1.0000000000000002" visibility="visible" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-width="2px" d="M 0.000 55.000 L -0.000 -55.000"></path></g></g></svg></div>
+</div>
+<div class="bucket-content">
+<em class="label label-b l-space">Courses Left</em>
+<ol class="list--badges">
+<li>
+<a href="https://www.codeschool.com/courses/try-r" data-content="Play the first level for free!" data-path="electives" data-play="/courses/try-r" rel="popup" title="Try R"><img alt="Try R" class="badge" height="65" src="./Dashboard - Code School_files/try-r-a0fcb9f1893a2a771b287df5c086e0e4.png" width="65">
+</a></li>
+<li>
+<a href="https://www.codeschool.com/courses/try-git" data-content="Play this course for free!" data-path="electives" data-play="/courses/try-git" rel="popup" title="Try Git"><img alt="Try Git" class="badge" height="65" src="./Dashboard - Code School_files/try-git-1d5111823aae2bb9d14fbcb663998353.png" width="65">
+</a></li>
+<li>
+<a href="https://www.codeschool.com/courses/git-real" data-content="Play the first level for free!" data-path="electives" data-play="/courses/git-real" rel="popup" title="Git Real"><img alt="Git Real" class="badge" height="65" src="./Dashboard - Code School_files/git-real-0dff71f415f4d97b6bff12c93c42d3e3.png" width="65">
+</a></li>
+<li>
+<a href="https://www.codeschool.com/courses/git-real-2" data-content="Play the first level for free!" data-path="electives" data-play="/courses/git-real-2" rel="popup" title="Git Real 2"><img alt="Git Real 2" class="badge" height="65" src="./Dashboard - Code School_files/git-real-2-68156caf5a53879b3d214f3b921e359f.png" width="65">
+</a></li>
+<li class="is-hidden">
+<a href="https://www.codeschool.com/courses/discover-devtools" data-content="Sharpen your dev process with Chrome DevTools." data-path="electives" data-play="/courses/discover-devtools" rel="popup" title="Discover DevTools"><img alt="Discover DevTools" class="badge" height="65" src="./Dashboard - Code School_files/discover-devtools-f78b78944d7fecf40a40c8f61df99a70.png" width="65">
+</a></li>
+<li class="is-hidden">
+<a href="https://www.codeschool.com/courses/discover-drive" data-content="Play this course for free!" data-path="electives" data-play="/courses/discover-drive" rel="popup" title="Discover Drive"><img alt="Discover Drive" class="badge" height="65" src="./Dashboard - Code School_files/discover-drive-2b1029e989beb93b6fe63af100dd28d9(1).png" width="65">
+</a></li>
+</ol>
+<a href="https://www.codeschool.com/account?__utma=1.1980953583.1402375261.1404362909.1404433603.6&__utmb=1.1.10.1404433603&__utmc=1&__utmk=20102456&__utmv=-&__utmx=-&__utmz=1.1402375261.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3D%28not%20provided%29#" class="list--badges-toggle">+ Show all</a>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="userBar c-invert" id="user-bar">
+<a href="https://www.codeschool.com/account?__utma=1.1980953583.1402375261.1404362909.1404433603.6&__utmb=1.1.10.1404433603&__utmc=1&__utmk=20102456&__utmv=-&__utmx=-&__utmz=1.1402375261.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3D%28not%20provided%29#" class="userBar-toggle"><div class="userBar-icon">
+<i></i> <span>Close</span>
+</div>
+</a><div class="userBar-content">
+<div class="userBar-block userBar-block--profile" id="user-bar-profile">
+<div class="bucket bucket--middle">
+<div class="bucket-media">
+<img alt="" class="l-media" height="50" src="./Dashboard - Code School_files/293e6275133c6c136731460088df7c53.jpg" width="50">
+</div>
+<div class="bucket-content">
+<h3 class="c-invert userBar-user">ChrisDamian</h3>
+<p>ChrisDamian</p>
+</div>
+</div>
+</div>
+<div class="userBar-block userBar-block--flush">
+<ul class="userBar-list">
+<li><a href="https://www.codeschool.com/account/edit" class="userBar-list-item">Edit Profile</a></li>
+<li><a href="https://www.codeschool.com/users/686693" class="userBar-list-item">My Report Card</a></li>
+</ul>
+</div>
+<div class="userBar-block userBar-block--stat">
+<ul>
+<li class="userBar-stat">
+<b>12650</b>
+Total Points
+</li>
+<li class="userBar-stat">
+<b>0</b>
+Courses Completed
+</li>
+<li class="userBar-stat">
+<b>0</b>
+Screencasts Watched
+</li>
+</ul>
+</div>
+<!-- TODO: Move to presenter, if you please -->
+</div>
+</aside>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+<footer class="l-row--a l-footer">
+<div class="l-cell">
+<div class="grid">
+<div class="grid-box grid-box--1of2">
+<div class="grid">
+<ul class="grid-box grid-box--1of2 list--stacked list--footer">
+<li><a href="https://www.codeschool.com/users/sign_up">Create a Free Account</a></li>
+<li><a href="https://www.codeschool.com/courses">View Courses</a></li>
+<li><a href="https://www.codeschool.com/courses/suggest">Suggest Course</a></li>
+<li><a href="https://www.codeschool.com/suggest/features">Suggest Feature</a></li>
+<li><a href="https://www.codeschool.com/enroll/team">Enroll Your Team</a></li>
+<li><a href="https://www.codeschool.com/support">Support</a></li>
+<li><a href="https://codeschool.getambassador.com/">Affiliate Program</a></li>
+</ul>
+<ul class="grid-box grid-box--1of2 list--stacked list--footer">
+<li><a href="https://www.codeschool.com/contact">Contact Code School</a></li>
+<li><a href="https://www.codeschool.com/about">About Us</a></li>
+<li><a href="https://www.codeschool.com/blog">Blog</a></li>
+<li><a href="http://shop.codeschool.com/">Shop</a></li>
+<li><a href="https://www.codeschool.com/jobs">Jobs</a></li>
+<li><a href="https://www.codeschool.com/terms_of_use">Terms of Use</a></li>
+<li><a href="https://www.codeschool.com/privacy_policy">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="grid-box grid-box--1of2">
+<p class="l-footer-about">
+Code School teaches web technologies in the comfort of your browser with video lessons,
+coding challenges, and screencasts. We strive to help you learn by doing.
+<span><a href="https://www.codeschool.com/about">Learn More</a></span>
+</p>
+<p class="l-footer-envy">
+<a href="http://envylabs.com/" class="l-footer-envy-link" target="_blank"><img alt="Made with Envy" height="79" src="./Dashboard - Code School_files/logo-envy-5f11fdfadcab08894d54e655dc95df2f.svg" width="160"></a>
+</p>
+</div>
+</div>
+<div class="l-footer-sub">
+<p class="l-footer-copyright">
+© 2014 Code School LLC - Crafted in Orlando.
+</p>
+<div class="list--social">
+<a href="https://twitter.com/codeschool" class="social-twitter">Twitter</a>
+<a href="http://facebook.com/codeschool" class="social-facebook">Facebook</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="./Dashboard - Code School_files/vendor-df28c1a61f6fed307fdd24722c30f7f0.js" type="text/javascript"></script>
+<script src="./Dashboard - Code School_files/application-34a253d24c6ddf81f260e6398501d9d0.js" type="text/javascript"></script>
+<script src="./Dashboard - Code School_files/analytics-a20d34f50543d01847974217832a6852.js" type="text/javascript"></script>
+<script src="./Dashboard - Code School_files/33r2xa49(1).js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['ua97407499._require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js']);_gaq.push(['ua974074923._require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js']);
+_gaq.push(['ua97407499._setAccount', 'UA-9740749-9']);_gaq.push(['ua974074923._setAccount', 'UA-9740749-23']);
+_gaq.push(['ua974074923._setDomainName', 'none']);_gaq.push(['ua974074923._setAllowLinker', true]);_gaq.push(['ua974074923._addIgnoredRef', 'codeschool.com']);
+_gaq.push(['ua974074923._addIgnoredRef', 'jqueryair.com']);
+_gaq.push(['ua974074923._addIgnoredRef', 'railsforzombies.org']);
+_gaq.push(['ua974074923._addIgnoredRef', 'superrails.com']);
+_gaq.push(['ua974074923._addIgnoredRef', 'tryruby.org']);
+_gaq.push(['ua974074923._addIgnoredRef', 'railsbest.com']);
+_gaq.push(['ua974074923._addIgnoredRef', 'discover-devtools.codeschool.com']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+var _gaq = _gaq || [];
+_gaq.push(['ua97407499._trackPageview', '/account?__utma=1.1980953583.1402375261.1404362909.1404433603.6&__utmb=1.1.10.1404433603&__utmc=1&__utmk=20102456&__utmv=-&__utmx=-&__utmz=1.1402375261.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3D%28not%20provided%29']);
+_gaq.push(['ua974074923._trackPageview', '/codeschool.com/account?__utma=1.1980953583.1402375261.1404362909.1404433603.6&__utmb=1.1.10.1404433603&__utmc=1&__utmk=20102456&__utmv=-&__utmx=-&__utmz=1.1402375261.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3D%28not%20provided%29']);/* ]]> */
+</script>
+
+<script type="text/javascript">
+  setTimeout(function(){var a=document.createElement("script");
+  var b=document.getElementsByTagName("script")[0];
+  a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/5212.js?"+Math.floor(new Date().getTime()/3600000);
+  a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
+<script src="./Dashboard - Code School_files/120055048.js"></script>
+
+      <script type="text/javascript">
+        (function() {
+  function async_load() {
+    var s = document.createElement('script');
+    s.type = 'text/javascript'; s.async = true;
+    s.src = '//d3itxuyrq7vzpz.cloudfront.net/assets/reamaze.js';
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+  }
+  if (window.attachEvent) {
+    window.attachEvent('onload', async_load);
+  } else {
+    window.addEventListener('load', async_load, false);
+  }
+})();
+
+var _support = _support || {}
+_support['account'] = 'codeschool';
+_support['ui'] = { container: '#knowledge-base', trigger: '#talk' };
+_support['id'] = "493b287b-9306-41f3-b186-7f91ccdf9a44";
+_support['authkey'] = "7be37b9f88f5a94f7ee8a1bea6ba186845f22255b8fbeea54c1583e68c936c50";
+_support['name'] = "ChrisDamian";
+_support['email'] = "christophermamian@gmail.com";
+_support['data'] = {"admin":"https://www.codeschool.com/admin/users/ChrisDamian","impersonate":"http://www.codeschool.com/users/ChrisDamian/impersonate","billing":"https://billing.envylabs.com/admin/sites/1/customers/686693","subscribed":false,"active_hall_pass":false};
+_support['custom_fields'] = {"current_page":{"type":"hidden","value":"https://www.codeschool.com/account?__utma=1.1980953583.1402375261.1404362909.1404433603.6\u0026__utmb=1.1.10.1404433603\u0026__utmc=1\u0026__utmk=20102456\u0026__utmv=-\u0026__utmx=-\u0026__utmz=1.1402375261.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3D%28not%20provided%29"},"referer_page":{"type":"hidden","value":"https://www.codeschool.com/users/sign_in"},"browser":{"type":"hidden","value":"Chrome 35 on Windows"},"browser_language":{"type":"hidden","value":"en-us \u0026 en"},"path":{"type":"dropdown","value":["Electives","Git","HTML/CSS","iOS","JavaScript","Ruby"],"placeholder":"Need help with a specific course Path?"}};
+
+      </script>
+
+
+<script>
+  $(function() {
+    $('.limiter-items').each(function() {
+      CS.limiter({
+        elements: $(this).find('> li'),
+        num: 5,
+        toggle: $(this).next('.limiter-toggle')
+      });
+    });
+  
+    $('.list--badges').each(function() {
+      CS.limiter({
+        elements: $(this).find('li'),
+        num: 4,
+        toggle: $(this).next('.list--badges-toggle')
+      });
+    });
+  
+    $('.limiter-items--paths').each(function() {
+      CS.limiter({
+        elements: $(this).find('.limiter-item--paths'),
+        num: 3,
+        toggle: $(this).find('.limiter-toggle--paths')
+      });
+    });
+  
+    $('a[rel="popup"]').each(function() { new CS.CoursePopup(this); });
+  
+    $('.badge--progress').each(function() {
+      elem = $(this)
+  
+      new CS.BadgeProgress({
+        selector: elem,
+        completed: elem.data('complete'),
+        total: elem.data('total')
+      });
+    });
+  
+    CS.urlPreview({ input: $('.preview-input'), preview: $('.preview-show') });
+  
+    CS.toggle({
+      event: 'click',
+      el: '.dropdown-toggle',
+      show: '.dropdown-menu'
+    });
+  
+    CS.dashboardFilter({
+      menu: $('.dropdown-menu'),
+      content: $('.filter-content')
+    });
+  
+    $('.feature-release h3 a').each(function() {
+      CS.fixOrphanWords({ text: $(this) });
+    });
+  
+  });
+</script>
+<script>
+  sublime.ready(function(){
+    var player = sublime.player('getting-started');
+    if ( player ) {
+      player.on({
+        start: function(player) {
+          CS.Segment.track( CS.Event.Video.PLAYED );
+        },
+        end: function(player) {
+          CS.Segment.track( CS.Event.Video.WATCHED );
+        }
+      });
+    }
+  });
+</script>
+
+
+
+
+<script src="./Dashboard - Code School_files/nr-411.min.js"></script><script type="text/javascript" src="./Dashboard - Code School_files/65b4af9171"></script></body></html>

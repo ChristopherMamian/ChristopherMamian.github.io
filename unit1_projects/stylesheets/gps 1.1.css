@@ -1,0 +1,42 @@
+ body {
+			     background-color: black;
+			     color: white;
+			    }
+			    #header {
+			        background-color: #FFA500;
+			        text-align: center;
+			        padding: 20px;
+			        
+			    }
+			    #content {
+			    	float: left;
+			    }
+			    #sidebar {
+			        height: auto;
+			        width: auto;
+			        float: left;
+			        color: orange;
+		          border:dotted;
+		          border-color:orange;
+		          margin:;
+		          
+			    }
+
+			    a:link {
+			        text-decoration: none;
+			        color: #FFA500;
+			        font-family: Verdana;
+			        font-size: 15px;
+			    }
+			    
+			    a:hover {
+			        color: green;
+			        font-family: sans-serif;
+			    }
+			    p {
+			    	color: white;
+			    }
+			    footer {
+			    	float:left;
+			    	
+			    }

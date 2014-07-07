@@ -3,10 +3,18 @@ header {
 }
 
 body {
+	float: left;
 	background-color: green;
+	width: 50%;
+	padding: 0px;
+	border: 5px solid black;
+	margin: 10px;
 }
 
 #posts {
+	width: 50px;
+	height 100px;
 	float: right;
 	margin: 10px;
+	border: 1px solid black;
 }
