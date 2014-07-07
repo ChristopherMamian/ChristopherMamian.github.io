@@ -1,6 +1,7 @@
 body{
 	background-image:url('..images/tech-background.jpg');
 	background-color:#cccccc;
+	color: blue;
 }
 
 a{
@@ -14,6 +15,9 @@ a:hover{
 
 p {
 	text-align: left;
+}
+div {
+	background-color: orange;
 }
 
 #container{

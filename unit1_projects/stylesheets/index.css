@@ -1,6 +1,6 @@
 body {
 	font-family: 'Montserrat', sans-serif;
-	background-image: url(../unit1_projects/images/mountains.jpg);
+	background-color: grey;
 }
 
 a:link {
@@ -19,22 +19,10 @@ a:active {
     color: #B8B894;
 }
 
-#sidebar {
-	width: 19.95%;
-	height: 100%;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	border-right: solid black 1px;
-}
 
-#sidebar img{
-	width: 55%;
-	display: block;
-	margin: auto;
-	margin-top: 10%;
-	padding: 2%;
-	border: solid black 1px;
+.Header-Links {
+	text-align: center;
+	border: solid;
 }
 
 nav{
@@ -62,39 +50,15 @@ nav li{
 	padding-right: 15%;
 }
 
-.blogimage {
-	display: block;
-	margin: auto;
-	width: 50%;
-	min-width: 300px;
-}
-
 footer {
 	width: 80%;
 	height: 50px;
 	float: right;
 	border-top: solid black 1px;
-	text-align: center;
+	text-align: right;
 	padding-top: 50px;
 }
 
-@media only screen and (max-width: 750px) {
-
-#sidebar {
-	width: 100%;
-	height: auto;
-	position: static;
-	border-right: none;
-	border-bottom: solid black 1px;
-}
-
-#sidebar img{
-	width: 40%;
-	display: block;
-	margin: auto;
-	margin-top: 5%;
-	padding: 2%;
-}
 
 nav {
 	padding: 10px;
