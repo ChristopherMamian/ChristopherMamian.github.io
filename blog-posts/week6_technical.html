@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content Type" content="text/html; charset=utf-8"/>
+  <title>Variable Scope in Ruby</title>
+  <link rel="stylesheet" href="stylesheets/week2_technical.css" type="text/css" media="screen">
+</head>
+<body>
+	<div id="container">
+	<div id="header">
+		<h1>CS Adventures with Cristobal</h1>
+	</div>
+	<div id="navigation">
+		<ul>
+			<li><h2><a href="http://christophermamian.github.io/">Home</a></h2></li>
+			<li><h2><a href="https://github.com/ChristopherMamian/">Github</a></h2></li>
+		</ul>
+	</div>
+	<div id="content-container">
+		<div id="content">
+			<h1>Variable Scope in Ruby</h1>
+
+
+<p>The scope of the variable dictates where in a program a variable is accessible. Ruby has four types of variable scope: local, global, instance, and class.</p><br>
+
+
+<h2>Local Variables</h2><br>
+
+<p>Local variables are limited to the block of code in which it is defined. For example, a local variable declared in a method cannot be accessed outside of the method. They are the simplest and most basic variable without any symbols attached to them. Local variable names begin with either an underscore or lower case letter.</p><br>
+
+<h2>Class Variables</h2><br>
+
+<p>These variables have @@ symbols preceding their names, and can be read and modified from any instance of the class in which the variable is defined. Only one variable value exists for all objects instantiated from this class. If one object instance changes the value of the variable, that new value will essentially change for all other object instances.</p><br>
+
+<h2>Instance Variables</h2><br>
+
+<p>Instance variables have a single @ sign before their name. These can be read and modified from the instance of the class in which it is created.</p><br>
+
+<h2>Global Variables</h2><br>
+
+<p>These have a $ symbol before the name and can be read and modified from anywhere in the Ruby doc, regardless of where they are declared. Use of global variables is strongly discouraged. The problem with global variables is that, not only are they visible anywhere in the code for a program, they can also be changed from anywhere in the application. This can make tracking bugs difficult.</p><br>
+
+
+</p><br>
+		</div>
+		<div id="aside">
+			<h3>Links to Other Dimensions</h3>
+			<ul>
+				<li><a href="http://christophermamian.github.io/blog-posts/week1_cultural.html">What I expect from DBC</a></li>
+				<li><a href="http://christophermamian.github.io/blog-posts/week1_technical.html">My Favorite Websites</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
