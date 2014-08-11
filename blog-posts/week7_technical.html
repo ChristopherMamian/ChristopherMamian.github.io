@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content Type" content="text/html; charset=utf-8"/>
+  <title>SQL Injection</title>
+  <link rel="stylesheet" href="stylesheets/week2_technical.css" type="text/css" media="screen">
+</head>
+<body>
+	<div id="container">
+	<div id="header">
+		<h1>CS Adventures with Cristobal</h1>
+	</div>
+	<div id="navigation">
+		<ul>
+			<li><h2><a href="http://christophermamian.github.io/">Home</a></h2></li>
+			<li><h2><a href="https://github.com/ChristopherMamian/">Github</a></h2></li>
+		</ul>
+	</div>
+	<div id="content-container">
+		<div id="content">
+			<h1></h1><br>
+
+<h2>What is SQL Injection?</h2><br>
+
+<p>SQL injection, while having been around for a long time, is still a very common vulnerability. In fact it was the #1 attack in 2010 and 2011. It occurs when commands are inserted into SQL where only data was expected. The injection is usually done on a login form.</p><br>
+
+<p>When you sign up for a site, your information gets stored in various fields. When you login, the information you provide are queried against the site's database. If the information matches what is in the database, you are logged in.</p><br>
+
+<p>However, what if the information you type in is something along the lines of "1=1," or you enter a comment demarcation to essentially disable a query parameter? The information in the field can include something like "DROP TABLE users," which would delete the table and screw everything to Hell.</p><br>
+
+<p>So how do we go about preventing this? The answer is parameterized queries, and they look something like this:</p><br>
+
+<p>"SELECT * FROM users WHERE email=? AND password=?", [user.email, user.password]</p><br>
+
+<p>This tells the database that you will look up an email and its password, but you will pass the specific values later. The database then sets up a query plan, which is a set of steps to find the records.</p><br>
+</p><br>
+		</div>
+		<div id="aside">
+			<h3>Links to Other Dimensions</h3>
+			<ul>
+				<li><a href="http://christophermamian.github.io/blog-posts/week1_cultural.html">What I expect from DBC</a></li>
+				<li><a href="http://christophermamian.github.io/blog-posts/week1_technical.html">My Favorite Websites</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
