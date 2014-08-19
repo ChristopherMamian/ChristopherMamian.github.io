@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content Type" content="text/html; charset=utf-8"/>
+  <title>Regular Expressions</title>
+  <link rel="stylesheet" href="stylesheets/week2_technical.css" type="text/css" media="screen">
+</head>
+<body>
+	<div id="container">
+	<div id="header">
+		<h1>CS Adventures with Cristobal</h1>
+	</div>
+	<div id="navigation">
+		<ul>
+			<li><h2><a href="http://christophermamian.github.io/">Home</a></h2></li>
+			<li><h2><a href="https://github.com/ChristopherMamian/">Github</a></h2></li>
+		</ul>
+	</div>
+	<div id="content-container">
+		<div id="content">
+			<h1></h1><br>
+
+<h2>Regular Expressions</h2>
+
+<p>If you're like me, when you first saw a regular expression, you found it strange and puzzling. These letters and characters might as well have been Greek. And while they certainly can be intimidating at first, they are worth diving into and will be useful additions to your knowledge reservoir.</p><br>
+
+<p>A regex, as they may be abbreviated, is used to pattern match strings, performing find and replace type operations. A regex can be used to grab information from text such as code, spreadsheets, and documents. With regex, everything is a character. Patterns are written to match specific sequences of characters or strings. Letters, digits, punctuation, and special characters are all fair game.</p><br>
+
+<p>There are a wide array of regular expressions out there. Here are some in order to better illustrate how they work.</p><br>
+
+<h3>/b and \b</h3>
+
+<p>This is a word boundary. We can add this before a collection of characters if we want to grab words beginning with the characters that proceed it, or after a collection if we want to grab words that end with it.</p><br>
+
+<p>For example:</p><br>
+
+<p>/ble will grab "letter", "left", "less", and any other words beginning with the letters "le".</p><br>
+
+<p>le\b will grab "little", "mile", "hole", and "pimple".</p><br>
+
+<h3>al\s\w</h3>
+
+<p>Now, something a little more intricate. What this regex does is search for a pattern with the letters "al" immediately followed by a space, then proceeded by any word character.</p><br>
+
+<p>These would include "animal 25" and "sandal beach".</p><br>
+
+<h3>b...\s\w[abc]</h3>
+
+<p>In this instance, we search for a pattern beginning with the letter "b", followed by any three characters, then a space, then any word character, then one of any of the characters a, b, or c.</p><br>
+
+<p>Patterns that would be returned include "back wake", "bear scrape", and "bode ache".</p><br>
+
+<p>For a full list of regular expressions, consult your local internet.</p>
+
+		</div>
+		<div id="aside">
+			<h3>Links to Other Dimensions</h3>
+			<ul>
+				<li><a href="http://christophermamian.github.io/blog-posts/week1_cultural.html">What I expect from DBC</a></li>
+				<li><a href="http://christophermamian.github.io/blog-posts/week1_technical.html">My Favorite Websites</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
